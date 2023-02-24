@@ -12,7 +12,12 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollTo(target: string): void {
-    $(`#${target}`)[0].scrollIntoView({ behavior: 'smooth' });
+  onScrollTo(target: string): void {
+    const positionY = $(`#${target}`).offset()!.top - 58;
+    window.scrollTo({ top: positionY, behavior: 'smooth' });
+  };
+
+  onGoToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 }

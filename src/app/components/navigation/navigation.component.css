@@ -1,3 +1,39 @@
-.nav-link {
-  text-decoration: none;
+/* ================= */
+/* || Navbar Main || */
+/* ================= */
+
+.navbar {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+}
+
+/* ================== */
+/* || Navbar Links || */
+/* ================== */
+
+.navbar-brand,
+.custom-nav-link {
+  color: var(--color-text-off);
+  cursor: pointer;
+}
+
+.custom-nav-link:hover {
+  color: var(--color-secondary);
+}
+
+.custom-nav-link::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: transparent;
+  margin: auto;
+  display: block;
+  transition: .3s;
+}
+
+@media screen and (min-width: 576px) {
+  .custom-nav-link:hover::after {
+    width: 100%;
+    background: var(--color-secondary);
+  }
 }

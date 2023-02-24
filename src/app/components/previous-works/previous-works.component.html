@@ -1,1 +1,31 @@
-<p>previous-works works!</p>
+<div class="main-wrap">
+  <div class="main-grid" id="previousWorks">
+    <h1 class="section-header">Previous Works</h1>
+
+    <div *ngFor="let project of projects">
+      <div class="project-card" id="{{ project.id }}" appElementIntersection>
+        <div class="project-image"
+          id="{{ project.id }}Image"
+          style="background-image: url({{project.image}})"></div>
+
+        <div class="project-details">
+          <div class="details-polygon" id="{{ project.id }}Polygon"></div>
+
+          <h2 class="project-name" id="{{ project.id }}Name">{{ project.name }}</h2>
+    
+          <p class="project-description" id="{{ project.id }}Description">{{ project.description }}</p>
+    
+          <div class="card-btn-container">
+            <button class="btn card-btn"
+              id="{{ project.id }}Git"
+              (click)="onRedirect(project.git)"><i class="fab fa-github"></i> GitHub</button>
+            
+            <button class="btn card-btn"
+              id="{{ project.id }}WorkingSite"
+              (click)="onRedirect(project.link)">Project Site</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

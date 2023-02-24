@@ -6,6 +6,7 @@ import { HeroLandingComponent } from './components/hero-landing/hero-landing.com
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PreviousWorksComponent } from './components/previous-works/previous-works.component';
+import { ElementIntersectionDirective } from './directives/element-intersection.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PreviousWorksComponent } from './components/previous-works/previous-wor
     HeroLandingComponent,
     AboutMeComponent,
     NavigationComponent,
-    PreviousWorksComponent
+    PreviousWorksComponent,
+    ElementIntersectionDirective
   ],
   imports: [
     BrowserModule
